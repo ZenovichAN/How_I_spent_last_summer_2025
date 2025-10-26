@@ -1,0 +1,116 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; /* чтобы padding и border включались в ширину */
+  max-width: 100%; /* ограничивает все элементы */
+}
+
+.header {
+  min-height: 100%;
+  background: url("../src/sajani.jpg") no-repeat center center/cover;
+  /* opacity: 0.6; */
+  overflow: hidden; /* предотвращает выход контента */
+}
+
+.image-logo {
+  padding: 40px 0px 20px 40px;
+  font-size: 18px;
+  max-width: 100%; /* ограничивает ширину */
+  box-sizing: border-box; /* учитывает padding в ширине */
+}
+
+.image-logo__logo {
+  width: 100px; /* фиксированная ширина вместо min-width */
+  height: 100px; /* фиксированная высота вместо min-height */
+  background: url("../src/motoWent.jpg") no-repeat center center/cover;
+  float: left;
+  border-radius: 50%;
+  shape-outside: circle(50%) content-box;
+  shape-margin: 10px;
+  margin-right: 10px;
+  border: 0.5px solid white;
+}
+
+.image-logo li {
+  list-style: none;
+  line-height: 25px;
+  word-wrap: break-word; /* перенос длинных слов */
+}
+
+.image-logo a {
+  text-decoration: none;
+  color: white;
+  display: block; /* чтобы ссылки не выходили за границы */
+}
+
+.main {
+  margin-top: 2px;
+  overflow: hidden; /* на всякий случай */
+}
+
+.month_januar {
+  grid-area: month_januar;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(350px, 1fr)); /* минимальная высота */
+  grid-template-columns: repeat(3, minmax(350px, 1fr)); /* минимальная ширина */
+  grid-template-areas: "img1 img2 img3" "img1 img4 img5" "img6 img7 img8";
+  border: 1px solid black;
+  gap: 2px;
+  max-width: 1200px; /* ограничиваем максимальную ширину */
+  margin: 0 auto;
+}
+
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9 {
+  min-width: 300px;
+  min-height: 300px;
+  background: no-repeat center center/cover;
+}
+
+.img1 {
+  grid-area: img1;
+  background-image: url("../src/IMG_20220710_132136.jpg");
+}
+
+.img2 {
+  grid-area: img2;
+  background-image: url("../src/IMG_20210822_145452.jpg");
+}
+
+.img3 {
+  grid-area: img3;
+  background-image: url("../src/IMG_20210822_145452.jpg");
+}
+
+.img4 {
+  grid-area: img4;
+  background-image: url("../src/motoWent.jpg");
+}
+
+.img5 {
+  grid-area: img5;
+  background-image: url("../src/motoWent.jpg");
+}
+
+.img6 {
+  grid-area: img6;
+  background-image: url("../src/motoWent.jpg");
+}
+
+.img7 {
+  grid-area: img7;
+  background-image: url("../src/motoWent.jpg");
+}
+
+.img8 {
+  grid-area: img8;
+  background-image: url("../src/motoWent.jpg");
+}
+
+.img9 {
+  grid-area: img9;
+  background-image: url("../src/motoWent.jpg");
+}
+
+/* Убираем лишние стили */
+.img-grid-januar {
+  display: none;
+}

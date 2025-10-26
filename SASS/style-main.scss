@@ -1,0 +1,13 @@
+.main{
+display: grid;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr;
+border: 1px solid black;
+grid-template-areas:
+""
+""
+""
+}
+.month_januar{
+grid-area: month_januar;
+}
